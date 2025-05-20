@@ -52,7 +52,7 @@ export default function TabsContent() {
                                 nextEl: '.swiper-button-next',
                                 prevEl: '.swiper-button-prev',
                             }}
-                            className="!pb-10"
+                            className="!pb-10 md:max-w-[950px] max-w-[700px]"
                         >
 
                             {orderData.map((items, index) => (

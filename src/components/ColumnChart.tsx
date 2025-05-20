@@ -72,12 +72,12 @@ const ColumnChart: React.FC = () => {
             data: [2394,5454,4343,3442,4554,1211,3232,4333,3232,1212,2222,4554],
             color:  isDarkMode ? '#8378FF' : '#513CCE',
             borderWidth:0,
-            pointWidth:60
+            pointWidth:40 
         }
       ]
   }
   return (
-    <div className="min-w-[800px]">
+    <div className="">
       <HighchartsReact highcharts={Highcharts} options={colOptions} />
     </div>
   );

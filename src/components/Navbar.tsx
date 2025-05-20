@@ -16,21 +16,18 @@ const NavBar = ({isDarkMode,setIsDarkMode}:NavBarProps) => {
           className="md:hidden text-black text-2xl"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? "✖" : "☰"}
+          {isOpen ? "✖" :<><img src={`images/hamburg.svg`} className=""  alt='logo' /></> }
         </button>
-        <div className={`flex items-center gap-2`}>
+        <div className={`absolute md:static top-[60px] left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none flex flex-row  md:flex-row md:items-center gap-2 transition-all duration-300 ${isOpen ? "block" : "hidden md:flex"}`}>
           <img src={`images/company-logo.svg`} className="dark:hidden" alt='logo' />
           <img src={`images/dark-logo.svg`} className="dark:block hidden"  alt='logo' />
-          
-          
           <img src={`images/round-side.svg`} className="dark:hidden"  alt='logo' />
           <img src={`images/dark-round.svg`} className="dark:block hidden" alt='logo' />
         </div>
+      
         <input className="border-[1px] dark:border-[#FFFFFF21] dark:bg-field_dark_bg pl-7 pr-12 rounded-[12px] outline-none h-[38px] w-full max-w-[50%]" type="text" placeholder="Search" />
         
-        <div className={`
-     absolute md:static top-[60px] left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none flex flex-row  md:flex-row md:items-center gap-2 transition-all duration-300 ${isOpen ? "block" : "hidden md:flex"
-          }`}>
+        <div className={`flex`}>
           <img src={`images/bell.svg`} className="cursor-pointer dark:hidden" alt='bell' />
           <img src={`images/dark-bell.svg`} className="dark:block hidden" alt='' />
           <select className="w-full border-0 rounded-md p-2 dark:border-[1px]  dark:!border-[#FFFFFF21]  dark:bg-field_dark_bg">
